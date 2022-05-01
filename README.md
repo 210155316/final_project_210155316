@@ -3,7 +3,7 @@ PSY6422 final project exploring how daily time use differs across 6 chosen count
 
 An interactive stacked bar plot was created for this project using the plot_ly package. 
 
-Link to the full project HERE
+Link to the full project [here](https://210155316.github.io/final_project_210155316/)
 
 Link to github pages [here](https://github.com/210155316/final_project_210155316)
 
