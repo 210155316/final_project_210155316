@@ -1,9 +1,11 @@
 ---
 title: "index"
-author: "Reg Number: 210155316"
+author: 'Reg Number: 210155316'
 date: '2022-04-30'
-output: html_document  
----
+output:
+  html_document: default
+  pdf_document: default
+--- 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -20,7 +22,7 @@ library(plotly)
 
 # Introduction and Motivation
 
-As Molly-Mae infamously stated, "we all have the same 24 hours in a day", but how does time expenditure differ across the globe? (Hague & Bartlett, 2022). 
+As Molly-Mae infamously stated, "we all have the same 24 hours in a day", but how does time expenditure differ across the globe? (Hague & Bartlett, 2022).  
 
 With my background as a medical student, I'm aware of how lifestyle-related health conditions vary in prevalence across the world. For example, 60% of Type 2 diabetics are of Asian heritage. (Malik, Willett & Hu, 2012). A more detailed understanding of global time-use variance could therefore highlight key lifestyle differences which may be contributing to health inequalities.
 
