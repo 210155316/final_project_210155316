@@ -1,0 +1,78 @@
+Time Use Project Codebook: 
+
+Variable                         Description 
+---------------           -------------------------
+Country                   The country of origin of the participants. 33 possible values:                  
+                          Australia, Austria, Belgium, Canada, Denmark, Estonia, Finland, France, 
+				  Germany, Greece, Hungary, Ireland, Italy, Japan, Korea, Latvia, Lithuania, 
+				  Luxembourg, Mexico, Netherlands, New Zealand, Norway, Poland, Portugal, 
+				  Slovenia, Spain, Sweden, Turkey, UK, USA, China, India, South Africa
+
+
+Category                  Data from time-use diaries and questionnaires were sorted into 14 activity categories: 
+                          Paid work, education, care for household  members,housework, shopping, other unpaid 
+				  work & volunteering, sleep, eating & drinking, personal care, sports, attending events, 
+			        seeing friends, TV & radio, other leisure 
+
+
+Time                      The average time spent in a given activity category in total minutes. 
+				  This was averaged from time-use diaries and questionnaires for participants from 
+				  each country 
+
+
+Hours 		        The average time spent in a given activity category converted to a decimal of an hour
+
+
+Duration 		        The average time spent in a given activity category converted to hours & mins format 
+
+
+Cumulative 			  The cumulative sum of hours - 0.5 x hours for that category. This was to define the 
+				  annotation label position in the middle of each category bar
+
+Percent 			  The percentage of total time spent in that activity category 
+
+
+
+Data origins:
+-------------
+
+The data used in this project was sourced from 'Our World In Data' (https://ourworldindata.org/time-use), 
+and was originally collected by The Organisation for Economic Co-operation and Development (OECD), 
+an inter-governmental economic organisation.
+
+Participants completed time-use diaries recording their sequence of activity during 24 hours, 
+alongside specific questionnaires where respondents recalled the proportion of time spent in a specific 
+activity category (information on the questions asked are not detailed in the original data). 
+
+
+Paricipants were aged between 15-64. 
+
+
+Functions:
+----------
+16 functions were created in this project due to the large amount of data wrangling required. 
+
+FUNCTION_001 - deleting the residual rows after category combining, deleting rows containing "Shopping", "Attending events", 
+			"TV and Radio", "Other leisure activities", "Housework", 
+			"Other unpaid work & volunteering", "Paid work", "Care for household members "
+		
+FUNCTION_002 - creates a "duration" column which contains time spent in each category in seconds, hours and minutes 
+FUNCTION_003 - creates an "hours" column containing time spent in each category as a decimal of an hour
+FUNCTION_004 - deletes the seconds information from the "duration" column, leaving just hours and minutes information
+FUNCTION_005 - deletes the unnecessary bracket from duration column 
+FUNCTION_006 - filters out cells containing "minutes" from the duration column. This is then saved in a new data frame in the 
+		   form country_mins
+FUNCTION_007 - filtering out cells contianing "hours" from teh duration column. This is then saved in a new data frame in 
+		   the form country_hours
+FUNCTION_008 - deleting the word "hours" from duration column
+FUNCTION_009 - converting duration column to numerical data 
+FUNCTION_010 - calculating whole hours and residual minutes using "floor" and "round" and pasting these together in hours, mins format
+FUNCTION_011 - combining the country_hours and country_mins data frames
+FUNCTION_012 - shortening "minutes" to "m" in duration column
+FUNCTION_013 - converting time column to numerical data 
+FUNCTION_014 - sorting by alphabetical category
+FUNCTION_015 -  defining label position in the middle of each bar using the following equation:(cumsum(df$hours) - df$hours/2). Saving 
+		    this in a new column "duration"
+
+FUNCTION_016 - calculates percentage of time spent in each category
+
