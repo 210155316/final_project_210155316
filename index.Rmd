@@ -35,7 +35,7 @@ Thus, the following research questions were outlined:
 
 2) Are there any time-use categories that are significantly different between European and East Asian countries?
 
-Please visit my GITHUB to access all documentation related to this project! 
+Please visit my [github repository](https://github.com/210155316/final_project_210155316) to access all documentation related to this project! 
 
 
 # Data Collection
@@ -47,7 +47,7 @@ Participants completed time-use diaries recording their sequence of activity dur
 
 The responses from people aged 15-64 were collected from 33 countries, averaged, and sorted into 14 separate activity categories. (Ortiz-Ospina, Giattino & Roser, 2022).
 
-More detailed explanations of the variables used and data origins can be accessed in the CODEBOOK.
+More detailed explanations of the variables used and data origins can be accessed in the [codebook](https://github.com/210155316/final_project_210155316/blob/main/data/codebook.txt).
 
 
 # Preparing the data
@@ -188,7 +188,7 @@ df_spain[17,2] <- "Work and Volunteering"
 df_spain[17,1] <- "Spain"
 ```
 
-Due to the large amount of data wrangling needed for this data set, 16 functions were created. Details on these can be found in the [codebook](https://github.com/210155316/210155316_project/blob/main/data/codebook.txt). 
+Due to the large amount of data wrangling needed for this data set, 16 functions were created. Details on these can be found in the [codebook](https://github.com/210155316/final_project_210155316/blob/main/data/codebook.txt). 
 
 ```{r}
 #CREATING FUNCTIONS 
